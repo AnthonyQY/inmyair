@@ -1,0 +1,105 @@
+.datacard__container {
+    display: block;
+
+    height: 33rem;
+    width: 50rem;
+
+    background-color: white;
+
+    border-radius: 0.75rem;
+
+    -webkit-box-shadow: 0px 15px 0px 0px rgba(207,207,207,1);
+    -moz-box-shadow: 0px 15px 0px 0px rgba(207,207,207,1);
+    box-shadow: 0px 15px 0px 0px rgba(207,207,207,1);
+}
+
+.datacard__flex {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+.datacard__quality__flex {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.datacard__quality__row__flex {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.datacard__quality {
+    color: white;
+
+    padding: 1rem;
+
+    border-radius: 1rem;
+
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.datacard__title {
+
+}
+
+.datacard__quality__text {
+    font-size: 2em;
+}
+
+.datacard__subtitle {
+    margin: 0;
+}
+
+.datacard__grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+}
+
+.quality__good > h3  {
+    background-color: darkgreen;
+}
+
+.quality__fair > h3  {
+    background-color: green;
+}
+
+.quality__moderate > h3  {
+    background-color: gold;
+}
+
+.quality__poor > h3 {
+    background-color: orangered;
+}
+
+.quality__verypoor > h3 {
+    background-color: red;
+}
+
+.quality__good > p  {
+    color: darkgreen;
+}
+
+.quality__fair > p  {
+    color: green;
+}
+
+.quality__moderate > p  {
+    color: gold;
+}
+
+.quality__poor > p {
+    color: orangered;
+}
+
+.quality__verypoor > p {
+    color: red;
+}
