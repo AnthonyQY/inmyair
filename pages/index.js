@@ -132,9 +132,11 @@ export default function Home() {
               animate={titleVisible ? "visible" : "hidden"}
             >
               <h1 className={styles.home__widget__title}>
-                What's in your air?
+                What&apos;s in your air?
               </h1>
-              <h2 className={styles.home__widget__subtitle}>Let's find out.</h2>
+              <h2 className={styles.home__widget__subtitle}>
+                Let&apos;s find out.
+              </h2>
             </motion.div>
             <SearchBar
               className={styles.home__searchbar}
