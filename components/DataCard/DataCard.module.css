@@ -4,6 +4,8 @@
     height: 33rem;
     width: 50rem;
 
+    margin-bottom: 2rem;
+
     background-color: white;
 
     border-radius: 0.75rem;
@@ -98,4 +100,43 @@
 
 .quality__verypoor > p {
     color: red;
+}
+
+@media (max-width: 850px) {
+    .datacard__container {
+        width: 40rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .datacard__container {
+        width: 26.5rem;
+        height: 27.5rem;
+    }
+
+    .datacard__flex {
+        padding-bottom: 0;
+    }
+
+    .datacard__title {
+        font-size: 1.5em;
+    }
+
+    .datacard__subtitle {
+        font-size: 1.25em;
+    }
+
+    .datacard__quality {
+        font-size: 1em;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    .datacard__quality__text {
+        font-size: 1.5em;
+    }
+
+    .datacard__statistics__title {
+        font-size: 1.5em;
+    }
 }

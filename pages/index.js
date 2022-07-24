@@ -16,6 +16,8 @@ export default function Home() {
   const [titleVisible, setTitleVisible] = useState(true);
   const [datacardVisible, setDatacardVisible] = useState(false);
 
+  const [showTitle, setShowTitle] = useState(true);
+
   const [lookupInput, setLookupInput] = useState("");
   const [datacard, setDatacard] = useState(undefined);
 
@@ -84,7 +86,10 @@ export default function Home() {
       setWidgetElevated(true);
     }
     if (titleVisible) {
-      setTitleVisible(false);
+      setTitleVisible(true);
+    }
+    if (showTitle) {
+      setShowTitle(false);
     }
 
     const airStats = await axios.get("/api/airStatistics", {
@@ -131,12 +136,16 @@ export default function Home() {
               initial="visible"
               animate={titleVisible ? "visible" : "hidden"}
             >
-              <h1 className={styles.home__widget__title}>
-                What&apos;s in your air?
-              </h1>
-              <h2 className={styles.home__widget__subtitle}>
-                Let&apos;s find out.
-              </h2>
+              {showTitle ? (
+                <div>
+                  <h1 className={styles.home__widget__title}>
+                    What&apos;s in your air?
+                  </h1>
+                  <h2 className={styles.home__widget__subtitle}>
+                    Let&apos;s find out.
+                  </h2>
+                </div>
+              ) : null}
             </motion.div>
             <SearchBar
               className={styles.home__searchbar}
