@@ -8,6 +8,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+
+    height: 100%;
 }
 
 .search__input {
@@ -75,11 +77,15 @@
 
 @media (max-width: 700px) {
     .search__container {
-        width: 15rem;
-        margin-left: -11.5rem;
+        width: 25rem;
     }
 
     .search__input {
         padding: 1rem;
+        font-size: 1em;
+    }
+
+    .search__button {
+        font-size: 1em;
     }
 }

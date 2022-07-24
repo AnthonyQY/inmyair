@@ -110,8 +110,8 @@
 
 @media (max-width: 700px) {
     .datacard__container {
-        width: 26.5rem;
-        height: 27.5rem;
+        width: 25em;
+        height: 26rem;
     }
 
     .datacard__flex {

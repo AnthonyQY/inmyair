@@ -17,6 +17,7 @@ export default function Home() {
   const [datacardVisible, setDatacardVisible] = useState(false);
 
   const [showTitle, setShowTitle] = useState(true);
+  const [showDatacard, setShowDatacard] = useState(false);
 
   const [lookupInput, setLookupInput] = useState("");
   const [datacard, setDatacard] = useState(undefined);
@@ -36,7 +37,7 @@ export default function Home() {
     elevated: {
       scale: 1,
       opacity: 1,
-      margin: "-40vh",
+      "margin-top": "-5vh",
       transition: {
         type: "linear",
       },
@@ -91,6 +92,9 @@ export default function Home() {
     if (showTitle) {
       setShowTitle(false);
     }
+    if (!showDatacard) {
+      setShowDatacard(true);
+    }
 
     const airStats = await axios.get("/api/airStatistics", {
       params: { location: lookupInput },
@@ -131,13 +135,12 @@ export default function Home() {
         >
           <div className={styles.home__widget__flex}>
             <motion.div
-              className={styles.home__widget__title__flex}
               variants={titleVariants}
               initial="visible"
               animate={titleVisible ? "visible" : "hidden"}
             >
               {showTitle ? (
-                <div>
+                <div className={styles.home__widget__title__flex}>
                   <h1 className={styles.home__widget__title}>
                     What&apos;s in your air?
                   </h1>
@@ -154,13 +157,16 @@ export default function Home() {
             />
           </div>
         </motion.div>
-        <motion.div
-          variants={datacardVariants}
-          initial="hidden"
-          animate={datacardVisible ? "refresh" : "hidden"}
-        >
-          {datacard}
-        </motion.div>
+        {showDatacard ? (
+          <motion.div
+            className={styles.home__widget__datacard}
+            variants={datacardVariants}
+            initial="hidden"
+            animate={datacardVisible ? "refresh" : "hidden"}
+          >
+            {datacard}
+          </motion.div>
+        ) : null}
       </div>
     </div>
   );
