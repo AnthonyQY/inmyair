@@ -110,8 +110,8 @@
 
 @media (max-width: 700px) {
     .datacard__container {
-        width: 25em;
-        height: 26rem;
+        width: 20em;
+        height: 23rem;
     }
 
     .datacard__flex {
@@ -138,5 +138,9 @@
 
     .datacard__statistics__title {
         font-size: 1.5em;
+    }
+
+    .datacard__grid__cell > h2 {
+        font-size: 1em;
     }
 }

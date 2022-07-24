@@ -77,7 +77,8 @@
 
 @media (max-width: 700px) {
     .search__container {
-        width: 25rem;
+        width: 20rem;
+        height: 3rem;
     }
 
     .search__input {
